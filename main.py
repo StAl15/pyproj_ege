@@ -337,4 +337,30 @@ for i in range(len(f)-1):
 
 print(count, max_s)'''
 
+# 22
+'''
+for x in range(10, 10000):
+    a = 7 * x + 27
+    b = 7 * x - 33
+    while a != b:
+        if a > b:
+            a -= b
+        else:
+            b -= a
+    if a == 10:
+        print(x, a)
+        break'''
+
+#23
+'''
+def F(curr, end):
+    if curr == end: return 1
+    if curr > end: return 0
+    if curr <= end:
+        R = F(curr + 1, end) + F(curr * 3, end)
+        return R
+
+
+print(F(2, 26) * F(26, 87))
+'''
 

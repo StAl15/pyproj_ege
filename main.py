@@ -351,7 +351,7 @@ for x in range(10, 10000):
         print(x, a)
         break'''
 
-#23
+# 23
 '''
 def F(curr, end):
     if curr == end: return 1
@@ -364,3 +364,31 @@ def F(curr, end):
 print(F(2, 26) * F(26, 87))
 '''
 
+
+# 25
+'''
+def M(N):
+    arr_div = []
+    for div in range(2, round(N ** 0.5) + 1):
+        div2 = N / div
+        if N % div == 0:
+            arr_div.append(div)
+        if N % div2 == 0:
+            arr_div.append(div2)
+    if len(arr_div) >= 4:
+        arr_div = sorted(arr_div)
+        r = 1
+        for i in range(0, 4 + 1):
+            r *= arr_div[i]
+        return r
+    else:
+        return 0
+
+
+counter = 0
+for n in range(500000000 + 1, 531999000):
+    if 0 < M(n) < n:
+        counter += 1
+        print(n, M(n), counter)
+    if counter == 5: break
+'''
